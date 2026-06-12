@@ -1,388 +1,66 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srishti Pandey | SDE & Product Builder</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); }
-        .accent { color: #22d3ee; }
-        .section-heading { position: relative; }
-        .section-heading:after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(to right, #22d3ee, #a855f7);
-            bottom: -8px;
-            left: 0;
-        }
-        .project-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website for Your Name.">
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body class="bg-zinc-950 text-zinc-100">
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-zinc-800">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tight">Srishti Pandey</div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
-                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
-                <a href="#leadership" class="hover:text-cyan-400 transition-colors">Leadership</a>
-                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="https://github.com/srishtidotcom" target="_blank" 
-                   class="px-5 py-2.5 text-sm font-semibold border border-zinc-700 hover:border-cyan-400 rounded-full transition-colors flex items-center gap-2">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="/Srishti_Pandey_Resume.pdf" target="_blank"
-                   class="px-6 py-2.5 bg-white text-zinc-900 hover:bg-cyan-400 text-sm font-semibold rounded-full transition-all">
-                    Download Resume
-                </a>
-            </div>
-        </div>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">Your Name</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="essays.html">Essays</a>
+        <a href="talks.html">Talks</a>
+        <a href="about.html">About</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">Theme</button>
+      </div>
     </nav>
+  </header>
 
-    <!-- Hero -->
-    <section class="min-h-screen flex items-center pt-20">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="space-y-4">
-                    <h1 class="text-6xl md:text-7xl font-bold tracking-tighter">Srishti Pandey</h1>
-                    <p class="text-2xl text-zinc-400">Computer Engineering Undergraduate</p>
-                    <p class="text-xl text-cyan-400 font-medium">Building AI Systems • Product Strategy • Full-Stack Development</p>
-                </div>
-                <p class="text-lg text-zinc-400 max-w-lg">
-                    Passionate about turning complex problems into elegant solutions. 
-                    Currently building AI orchestration tools and leading product initiatives at PICT.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" 
-                       class="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold rounded-2xl transition-all text-lg">
-                        View Projects
-                    </a>
-                    <a href="https://www.linkedin.com/in/pandey-srishti-/" target="_blank"
-                       class="px-8 py-4 border border-zinc-700 hover:border-white font-semibold rounded-2xl transition-all text-lg flex items-center gap-2">
-                        <i class="fab fa-linkedin"></i> Connect
-                    </a>
-                </div>
-                <div class="flex items-center gap-8 text-sm pt-6">
-                    <div>
-                        <a href="mailto:srishti.pandey.work@gmail.com" class="hover:text-cyan-400 transition-colors flex items-center gap-2">
-                            <i class="fas fa-envelope"></i> srishti.pandey.work@gmail.com
-                        </a>
-                    </div>
-                    <div>+91 75881 04177</div>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="aspect-square rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900">
-                    <!-- Replace with your photo URL -->
-                    <img src="https://via.placeholder.com/600x600/1f2937/22d3ee?text=Srishti+Pandey" 
-                         alt="Srishti Pandey" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute -bottom-4 -right-4 bg-zinc-900 glass border border-zinc-700 rounded-2xl px-6 py-4 text-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                        Open to SDE / PM roles
-                    </div>
-                </div>
-            </div>
-        </div>
+  <main class="page">
+    <section class="hero" aria-labelledby="intro-title">
+      <!-- Replace this name, tagline, and contact information with your own. -->
+      <p class="eyebrow">Personal site</p>
+      <h1 id="intro-title">Your Name</h1>
+      <p class="tagline">I build thoughtful software, write about systems, and enjoy turning fuzzy ideas into useful things.</p>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold mb-8 section-heading">About Me</h2>
-            <div class="prose prose-invert text-lg text-zinc-300">
-                <p>
-                    Third-year Computer Engineering student at Pune Institute of Computer Technology (CGPA 9.3/10) with a strong foundation in AI/ML, full-stack development, and product strategy. 
-                    I build intelligent systems that solve real problems — from AI workflow orchestrators to explainable loan recommendation platforms.
-                </p>
-                <p>
-                    Alongside technical work, I lead branding, community, and product initiatives at college, driving significant growth in reach and engagement while mentoring students in AI and finance.
-                </p>
-            </div>
-        </div>
+    <section class="section" aria-labelledby="things-title">
+      <h2 id="things-title">Some things about me</h2>
+      <ul class="large-list">
+        <li>I am interested in applied AI, product engineering, developer tools, and clean interfaces.</li>
+        <li>I like small teams, clear writing, fast prototypes, and boring technology that works.</li>
+        <li>Recently, I have been exploring retrieval systems, human-centered automation, and better workflows for knowledge work.</li>
+        <li>Outside of work, I enjoy reading, long walks, notebooks, and occasionally over-optimizing my coffee setup.</li>
+      </ul>
     </section>
 
-    <!-- Education -->
-    <section class="py-24">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold mb-12 section-heading">Education</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass border border-zinc-800 rounded-3xl p-8">
-                    <div class="text-cyan-400 text-sm font-medium">2024 – Present</div>
-                    <div class="text-2xl font-semibold mt-3">B.Tech Computer Engineering</div>
-                    <div class="text-zinc-400">Pune Institute of Computer Technology</div>
-                    <div class="mt-6 text-3xl font-bold text-cyan-400">9.3 / 10.0</div>
-                    <div class="text-sm text-zinc-500">*End of 4th semester</div>
-                    <div class="mt-4 text-sm">Minor: Finance & Management<br>Honors: Blockchain Technology</div>
-                </div>
-                <div class="glass border border-zinc-800 rounded-3xl p-8">
-                    <div class="text-cyan-400 text-sm font-medium">2021 – 2023</div>
-                    <div class="text-xl font-semibold mt-3">Senior Secondary (HSC)</div>
-                    <div class="text-zinc-400">Maharashtra State Board</div>
-                    <div class="mt-8 text-3xl font-bold">83.83%</div>
-                </div>
-                <div class="glass border border-zinc-800 rounded-3xl p-8">
-                    <div class="text-cyan-400 text-sm font-medium">2019 – 2021</div>
-                    <div class="text-xl font-semibold mt-3">Secondary (AISSE)</div>
-                    <div class="text-zinc-400">CBSE</div>
-                    <div class="mt-8 text-3xl font-bold">96.8%</div>
-                </div>
-            </div>
-        </div>
+    <section class="section" aria-labelledby="nav-title">
+      <h2 id="nav-title">Site navigation</h2>
+      <div class="link-grid">
+        <a href="experience.html">Experience <span>Roles, internships, and work history</span></a>
+        <a href="education.html">Education <span>Degrees, institutions, and achievements</span></a>
+        <a href="projects.html">Projects <span>Selected software and research builds</span></a>
+        <a href="publications.html">Publications <span>Papers, posters, and preprints</span></a>
+        <a href="essays.html">Essays <span>Notes, observations, and longer writing</span></a>
+        <a href="talks.html">Talks <span>Presentations, podcasts, and videos</span></a>
+        <a href="about.html">About <span>Personal details, values, and fun facts</span></a>
+      </div>
     </section>
+  </main>
 
-    <!-- Projects -->
-    <section id="projects" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold mb-4 section-heading">SDE / SWE Projects</h2>
-            <p class="text-zinc-400 mb-12">Building production-grade systems with modern AI and full-stack technologies</p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Flowstate -->
-                <div class="project-card glass border border-zinc-800 rounded-3xl p-8">
-                    <div class="text-cyan-400 font-mono text-sm mb-2">AI Orchestration</div>
-                    <h3 class="text-2xl font-semibold mb-4">Flowstate — AI Workflow Orchestrator</h3>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">FastAPI</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">Redis</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">NetworkX</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">ChromaDB</span>
-                    </div>
-                    <ul class="space-y-3 text-zinc-300 text-sm">
-                        <li>• Converts unstructured communication into executable task DAGs</li>
-                        <li>• Bottleneck detection, critical path analysis & semantic deduplication</li>
-                        <li>• Event-driven architecture with Redis workers and modular connectors</li>
-                    </ul>
-                    <a href="https://github.com/srishtidotcom" target="_blank" 
-                       class="mt-8 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                        View on GitHub →
-                    </a>
-                </div>
-
-                <!-- Support Triage -->
-                <div class="project-card glass border border-zinc-800 rounded-3xl p-8">
-                    <div class="text-cyan-400 font-mono text-sm mb-2">Multi-Agent RAG</div>
-                    <h3 class="text-2xl font-semibold mb-4">Support Ticket Triage Agent</h3>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">Python</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">FAISS + BM25</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">Ollama</span>
-                    </div>
-                    <ul class="space-y-3 text-zinc-300 text-sm">
-                        <li>• Hybrid retrieval with deterministic reranking and source attribution</li>
-                        <li>• Safety agents for prompt-injection, PII redaction & adversarial defense</li>
-                        <li>• Reflection layers for grounded, consistent responses</li>
-                    </ul>
-                    <a href="https://github.com/srishtidotcom" target="_blank" 
-                       class="mt-8 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                        View on GitHub →
-                    </a>
-                </div>
-
-                <!-- LoanSense -->
-                <div class="project-card glass border border-zinc-800 rounded-3xl p-8">
-                    <div class="text-cyan-400 font-mono text-sm mb-2">Explainable ML</div>
-                    <h3 class="text-2xl font-semibold mb-4">LoanSense — Loan Advisory Platform</h3>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">MERN</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">XGBoost</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">SHAP</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">FastAPI</span>
-                    </div>
-                    <ul class="space-y-3 text-zinc-300 text-sm">
-                        <li>• Explainable XGBoost classifier with SHAP interpretability</li>
-                        <li>• Recommendation engine matching users to suitable loan products</li>
-                        <li>• Full-stack integration with FastAPI microservices</li>
-                    </ul>
-                    <a href="https://github.com/srishtidotcom" target="_blank" 
-                       class="mt-8 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                        View on GitHub →
-                    </a>
-                </div>
-
-                <!-- Hostel Booking -->
-                <div class="project-card glass border border-zinc-800 rounded-3xl p-8">
-                    <div class="text-cyan-400 font-mono text-sm mb-2">Real-time Systems</div>
-                    <h3 class="text-2xl font-semibold mb-4">Hostel Room Booking System</h3>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">Node.js</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">React</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">Three.js</span>
-                        <span class="px-3 py-1 text-xs bg-zinc-800 rounded-full">Razorpay</span>
-                    </div>
-                    <ul class="space-y-3 text-zinc-300 text-sm">
-                        <li>• Real-time availability tracking with WebSockets and Redis queues</li>
-                        <li>• Interactive 3D hostel visualization for room selection</li>
-                        <li>• Secure payments and conflict resolution system</li>
-                    </ul>
-                    <a href="https://github.com/srishtidotcom" target="_blank" 
-                       class="mt-8 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                        View on GitHub →
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership -->
-    <section id="leadership" class="py-24">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold mb-12 section-heading">Product & Leadership</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass border border-zinc-800 rounded-3xl p-8 space-y-8">
-                    <div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <div class="font-semibold">Head of Branding & Communications</div>
-                                <div class="text-cyan-400">TEDxPICT • Jun 2025 – Present</div>
-                            </div>
-                        </div>
-                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
-                            <li>• Led branding & content strategy across 50-member team</li>
-                            <li>• Evaluated 100+ speaker applications and conducted interviews</li>
-                            <li>• Drove 1375% growth in audience reach through media & podcasts</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <div class="font-semibold">Co-Vice President</div>
-                                <div class="text-cyan-400">PICT Finance Society • Mar 2025 – Present</div>
-                            </div>
-                        </div>
-                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
-                            <li>• Delivered financial literacy workshops for 650+ students</li>
-                            <li>• Winner – Stock Overflow Pitch Competition (Data Patterns India Ltd.)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="glass border border-zinc-800 rounded-3xl p-8 space-y-8">
-                    <div>
-                        <div class="font-semibold">Teaching Assistant</div>
-                        <div class="text-cyan-400">PICT Model School • Jan 2025 – Jan 2026</div>
-                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
-                            <li>• Designed and taught AI curriculum (NEP 2020 aligned) to 160+ students (Grades 3-8)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="font-semibold">Marketing Team Lead</div>
-                        <div class="text-cyan-400">PICTMUN • Jun 2025 – Dec 2025</div>
-                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
-                            <li>• Secured 5 sponsorships and managed vendor relations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold mb-12 section-heading">Skills</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-xl font-semibold mb-6 text-cyan-400">Software Engineering</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Python</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">FastAPI</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">React.js</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Node.js</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Redis</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Docker</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">PostgreSQL</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">XGBoost + SHAP</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">RAG / Vector DBs</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Three.js</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-6 text-cyan-400">Product & Strategy</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Product Strategy</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Market Research</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Financial Modeling</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Stakeholder Management</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Community Building</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">Growth & PR</span>
-                        <span class="px-5 py-3 bg-zinc-800 rounded-2xl text-sm">AI Product Thinking</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements -->
-    <section class="py-24">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold mb-12 section-heading">Achievements & Certifications</h2>
-            <div class="space-y-6">
-                <div class="flex gap-6 items-start">
-                    <div class="w-2 h-2 mt-3 bg-cyan-400 rounded-full"></div>
-                    <div>
-                        <div class="font-semibold">Winner — Stock Overflow (Pitch Competition)</div>
-                        <div class="text-sm text-zinc-400">PICT Finance Society, 2025</div>
-                    </div>
-                </div>
-                <div class="flex gap-6 items-start">
-                    <div class="w-2 h-2 mt-3 bg-cyan-400 rounded-full"></div>
-                    <div>
-                        <div class="font-semibold">Winner — Ideathon</div>
-                        <div class="text-sm text-zinc-400">PICT ACM Student Chapter, 2024</div>
-                    </div>
-                </div>
-                <div class="flex gap-6 items-start">
-                    <div class="w-2 h-2 mt-3 bg-cyan-400 rounded-full"></div>
-                    <div>
-                        <div class="font-semibold">Foundation Certificate in Data Science</div>
-                        <div class="text-sm text-zinc-400">IIT Madras (PDSA, DBMS)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black py-12 border-t border-zinc-900">
-        <div class="max-w-6xl mx-auto px-6 text-center text-sm text-zinc-500">
-            <div class="flex justify-center gap-8 mb-6">
-                <a href="https://github.com/srishtidotcom" target="_blank" class="hover:text-zinc-300 transition-colors">GitHub</a>
-                <a href="https://www.linkedin.com/in/pandey-srishti-/" target="_blank" class="hover:text-zinc-300 transition-colors">LinkedIn</a>
-                <a href="mailto:srishti.pandey.work@gmail.com" class="hover:text-zinc-300 transition-colors">Email</a>
-            </div>
-            <div>© 2026 Srishti Pandey</div>
-        </div>
-    </footer>
-
-    <script>
-        // Simple Tailwind script + smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+  <footer class="site-footer">
+    <p>Contact: <a href="mailto:hello@example.com">hello@example.com</a></p>
+    <p>Design inspiration from <a href="https://nat.org/" rel="noreferrer">Nat Friedman</a>.</p>
+  </footer>
 </body>
 </html>
