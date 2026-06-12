@@ -26,7 +26,7 @@ body {
   background: var(--background);
   color: var(--text);
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 15px; 
+  font-size: 17px;
   line-height: 1.62;
   text-rendering: optimizeLegibility;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .site-header {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .site-name {
@@ -87,7 +87,7 @@ main {
 }
 
 .intro {
-  margin-bottom: 54px;
+  margin-bottom: 32px;
 }
 
 h1,
@@ -100,13 +100,13 @@ h3 {
 }
 
 h1 {
-  margin-bottom: 26px;
+  margin-bottom: 18px;
   font-size: clamp(2.5rem, 9vw, 4.9rem);
   letter-spacing: 0;
 }
 
 h2 {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   font-size: 1.35rem;
 }
 
@@ -116,11 +116,11 @@ h3 {
 }
 
 p {
-  margin: 0 0 18px;
+  margin: 0 0 12px;
 }
 
 ul {
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   padding-left: 1.25rem;
 }
 
@@ -129,13 +129,13 @@ li + li {
 }
 
 .section {
-  margin-top: 46px;
-  padding-top: 30px;
+  margin-top: 28px;
+  padding-top: 20px;
   border-top: 1px solid var(--rule);
 }
 
 .page-title {
-  margin-bottom: 42px;
+  margin-bottom: 24px;
 }
 
 .page-title p,
@@ -146,7 +146,7 @@ li + li {
 }
 
 .entry {
-  margin: 0 0 34px;
+  margin: 0 0 20px;
 }
 
 .entry:last-child {
@@ -176,8 +176,8 @@ li + li {
 }
 
 .site-footer {
-  margin-top: 70px;
-  padding-top: 26px;
+  margin-top: 40px;
+  padding-top: 20px;
   border-top: 1px solid var(--rule);
   color: var(--faint);
   font-size: 0.95rem;
@@ -189,7 +189,7 @@ li + li {
 
 @media (max-width: 560px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .site {
